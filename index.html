@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+  <style>
+    
+   
+
+    .sizemodal{
+      height: 90px;
+    }
+
+    .navbar-nav { width: 100%;}
+
+    card-img-top {
+      width: 100%;
+      object-fit: cover;
+      
+    }
+
+    .size_of_cards_container {
+      width: 40%;
+    }
+
+    .card{
+      width: 100% 
+    }
+
+    .fullwidth {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 500px;
+    }
+  </style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" class="me-auto p-2"> <i class="fa-brands fa-instagram"></i> Instagram</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item ms-auto">
+
+                <button type="button" class="btn btn-success me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Create a New post
+                </button>
+                
+               
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Create a New post</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="d-flex flex-column mb-0 ">
+                          <label for="exampleInputPassword1" class="form-label">Caption: </label>
+                          <textarea type="textarea"  id="exampleInputPassword1" class="sizemodal">add the caption of your post
+                          </textarea>
+                        </div>
+
+                        <div class ="d-flex p-2 pt-0 gap-2 m-0 pt-3" >
+                          <button type="button" class="btn btn-secondary"><i class="fa-solid fa-camera-retro"></i></button>
+                          <button type="button" class="btn btn-secondary"><i class="fa-solid fa-location-dot"></i></button>
+
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+              <li class="nav-item">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item mb-1" href="#">Profile</a></li>
+                    <li><a class="dropdown-item mb-1" href="#">Accessibility</a></li>
+                    <li><a class="dropdown-item mb-1" href="#">Privacy and Data</a></li>
+                    
+                    <div class = "border-top"></div>
+                    <li><a class="dropdown-item text-danger mt-2" href="#">Log out</a></li>
+                  </ul>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex p-2 justify-content-center " >
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-display"></i></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-users-rectangle"></i></button>
+          </li>
+          
+        </ul>
+        
+        
+      
+      </div>
+
+      
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            
+              <div class="row row-cols-3 m-0 fullwidth">
+                <div class="col p-1"> <img src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25116125/lethal_company_clayton.png?quality=90&strip=all&crop=7.8125%2C0%2C84.375%2C100&w=750" alt=""></div>
+                <div class="col p-1"><img src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24711616/Palworld_Screenshot_13.jpeg?quality=90&strip=all&crop=7.8125%2C0%2C84.375%2C100&w=750" alt=""></div>
+                <div class="col p-1"><img src="https://steamuserimages-a.akamaihd.net/ugc/1764820095379054399/E05280395A261A2FEF1864E6878E87DA7B69E60B/" alt=""></div>
+                <div class="col p-1"> <img src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25116125/lethal_company_clayton.png?quality=90&strip=all&crop=7.8125%2C0%2C84.375%2C100&w=750" alt=""></div>
+                <div class="col p-1"><img src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24711616/Palworld_Screenshot_13.jpeg?quality=90&strip=all&crop=7.8125%2C0%2C84.375%2C100&w=750" alt=""></div>
+                <div class="col p-1"><img src="https://steamuserimages-a.akamaihd.net/ugc/1764820095379054399/E05280395A261A2FEF1864E6878E87DA7B69E60B/" alt=""></div>
+                <div class="col p-1"> <img src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25116125/lethal_company_clayton.png?quality=90&strip=all&crop=7.8125%2C0%2C84.375%2C100&w=750" alt=""></div>
+                <div class="col p-1"><img src="https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24711616/Palworld_Screenshot_13.jpeg?quality=90&strip=all&crop=7.8125%2C0%2C84.375%2C100&w=750" alt=""></div>
+                <div class="col p-1"><img src="https://steamuserimages-a.akamaihd.net/ugc/1764820095379054399/E05280395A261A2FEF1864E6878E87DA7B69E60B/" alt=""></div>
+                
+
+              </div>
+            
+            
+          </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class= "d-flex justify-content-center" >
+             <div class = "flex-column size_of_cards_container ">
+          
+              
+              <div class="card sizecard mb-5 pb-2 mt-4">
+                <div class =  "d-flex">
+                <h2 class = "me-auto">Hello How are you</h2> 
+                <p>16/02/2027</p>
+                </div>
+                <img src="https://www.giantbomb.com/a/uploads/scale_small/46/462814/3245766-5281956822-latest.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">1.1k Likes</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui corporis laboriosam iure, porro, unde quos corrupti voluptatum dignissimos quasi possimus distinctio iste asperiores? Alias suscipit labore atque error, saepe ex!</p>
+                  
+                </div>
+              </div>
+
+              <div class="card sizecard pb-3 mb-5" >
+                <div class =  "d-flex">
+                <h2 class = "me-auto">Hello How are you</h2> 
+                <p>16/02/2027</p>
+                </div>
+                <img src="https://wallpapers.com/images/high/cool-profile-picture-minion-13pu7815v42uvrsg.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">1.1k Likes</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui corporis laboriosam iure, porro, unde quos corrupti voluptatum dignissimos quasi possimus distinctio iste asperiores? Alias suscipit labore atque error, saepe ex!</p>
+                  
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+          
+        
+        
+       
+      </div>
+
+  </body>
+</html>
